@@ -7,7 +7,8 @@ export function useMarketData() {
 
   useEffect(() => {
     // Connect to Fastify WebSocket Backend
-    const ws = new WebSocket('ws://localhost:3000/ws/market-data');
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:3000/ws/market-data';
+    const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
     ws.onopen = () => {
