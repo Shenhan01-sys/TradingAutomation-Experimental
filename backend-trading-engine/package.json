@@ -1,0 +1,30 @@
+{
+  "name": "trading-engine",
+  "version": "1.0.0",
+  "description": "Autonomous AI Trading Bot Engine",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
+    "@fastify/websocket": "^10.0.1",
+    "@sinclair/typebox": "^0.32.22",
+    "axios": "^1.7.2",
+    "bullmq": "^5.8.0",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "ioredis": "^5.4.1",
+    "openai": "^4.47.1",
+    "pino": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "pino-pretty": "^11.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
